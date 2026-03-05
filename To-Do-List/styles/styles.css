@@ -14,7 +14,7 @@ body{
 form{
     border: 1px solid #ccc;
     display: flex;
-    background: #008380;
+    background: #830007;
     padding: 1rem;
     color: #ffff;
     border-radius: 5px;
@@ -48,7 +48,7 @@ li{
     align-items: center;
 }
 li > button{
-    background: red;
+    background: rgb(204, 0, 255);
     color: #ffff;
     font-size: 12px;
     border-radius: 50%;
