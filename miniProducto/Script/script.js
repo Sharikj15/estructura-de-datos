@@ -1,0 +1,25 @@
+ async function cargarComponente(id, url) {
+    const resp = await fetch(url);
+    const html = await resp.text();
+    document.getElementById(id).innerHTML = html;
+  }
+  cargarComponente("Header", "./componnet/Header/header.html");
+  cargarComponente("card-template", "./componnet/card/card.html");
+
+
+  class MiCard extends HTMLElement {
+    constructor() {
+      super();
+      const shadow = this.attachShadow({mode: "open"});
+      shadow.innerHTML = `
+        <style>
+          .card { border: 1px solid #ccc; padding: 10px; margin: 5px; }
+        </style>
+        <div class="card">
+          <h2>${this.getAttribute("titulo")}</h2>
+          <p>${this.getAttribute("descripcion")}</p>
+        </div>
+      `;
+    }
+  }
+  customElements.define("mi-card", MiCard);
