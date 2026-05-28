@@ -2,13 +2,13 @@
   <form @submit.prevent="onSubmit">
     <div class="mb-3">
       <label class="form-label">Nombre</label>
-      <input v-model="local.name" required class="form-control" />
+      <input v-model="local.title" required class="form-control" />
     </div>
 
     <div class="mb-3 row">
       <div class="col">
         <label class="form-label">Precio</label>
-        <input v-model.number="local.price" type="number" step="0.01" min="0" required class="form-control" />
+        <input v-model.number="local.price" type="number" step="1.000.000" min="0" required class="form-control" />
       </div>
       <div class="col">
         <label class="form-label">Categoría</label>
@@ -55,12 +55,12 @@ export default {
 
     const resetFromProps = () => {
       if (props.product) {
-        local.name = props.product.name ?? ''
+        local.title = props.product.title ?? ''
         local.price = props.product.price ?? null
         local.category = props.product.category ?? ''
         local.description = props.product.description ?? ''
       } else {
-        local.name = ''
+        local.title = ''
         local.price = null
         local.category = ''
         local.description = ''

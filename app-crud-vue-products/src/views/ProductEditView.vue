@@ -18,7 +18,7 @@
 </template>
 
 <script>
-//import SidebarComponent from '@/components/SidebarComponent.vue';
+import SidebarComponent from '@/components/SidebarComponent.vue';
 import { ref, onMounted } from 'vue'
 import productService from '@/services/productService'
 import ProductForm from '@/components/ProductsForm.vue'
